@@ -1,0 +1,712 @@
+/* =======================
+   Navbar
+======================= */
+.navbar {
+    background-color: #0B1D3A;
+    /* كحلي داكن */
+    padding: 12px 20px;
+    position: sticky;
+    /* يظل ثابت أثناء التمرير */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    /* يعطي إحساس بالارتفاع والفصل عن الهيرو */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    /* فصل خفيف بدون تشويش */
+    transition: background 0.3s ease;
+}
+
+/* Navbar Container */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Brand */
+.navbar-brand {
+    color: #F5EBDD !important;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.nav-link {
+    color: #F5EBDD !important;
+    font-size: 16px;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: #FF8C42 !important;
+}
+
+/* Navbar Right */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* =======================
+   Language Dropdown
+======================= */
+.lang-select {
+    background: transparent;
+    color: #F5EBDD;
+    border: 1px solid #F5EBDD;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 80px;
+}
+
+/* عند التركيز أو الفتح */
+.lang-select:focus {
+    background: #F5EBDD;
+    color: #0D2B56;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Dropdown Options */
+.lang-options {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background-color: #0B1D3A;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: none;
+    /* مخفي بشكل افتراضي */
+    z-index: 1001;
+}
+
+.lang-select.open+.lang-options {
+    display: block;
+    /* يظهر عند فتح */
+}
+
+/* Language Dropdown */
+.lang-options {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    background-color: #0B1D3A;
+    border-radius: 12px;
+    /* حواف دائرية أكبر */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: none;
+    /* مخفي بشكل افتراضي */
+    z-index: 1001;
+}
+
+/* كل خيار */
+.lang-option {
+    padding: 10px 14px;
+    /* زيادة المساحة الداخلية لراحة العين */
+    color: #F5EBDD;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+    /* حواف دائرية لكل خيار */
+    margin: 4px;
+    /* مسافة بسيطة بين الخيارات */
+}
+
+.lang-option:hover {
+    background-color: #FF6B35;
+    color: #FFFFFF;
+}
+
+/* =======================
+   Order Button
+======================= */
+.btn-order {
+    background-color: #FF6B35;
+    color: #F5EBDD;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #f8571c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.5);
+    color: black;
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero-section {
+    position: relative;
+    background: linear-gradient(to bottom, #1F3B5F, #1B3350);
+    /* تدرج يعطي عمق ويفصل بصريًا عن الناف */
+    color: #F5EBDD;
+    padding: 140px 20px 120px;
+    /* زيادة الهيرو شوية عشان الناف يبان فوقه */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* خفف الظل عن الهيرو عشان النصوص تبان */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px 0;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-section .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+.about-section {
+    background-color: #F5EBDD;
+    padding: 100px 20px;
+    color: #0B1D3A;
+}
+
+.about-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* LEFT */
+.about-content {
+    max-width: 520px;
+    border-left: 3px solid #FF6B35;
+    padding-left: 20px;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.about-highlight {
+    display: block;
+    margin: 15px 0 25px;
+    font-size: 13px;
+    color: #FF6B35;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* RIGHT */
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 25px;
+    border-left: 2px solid rgba(11, 29, 58, 0.1);
+}
+
+/* STAT LINE */
+.stat-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.stat-line:hover {
+    transform: translateX(6px);
+}
+
+/* LABEL */
+.label {
+    font-size: 14px;
+    color: #777;
+    min-width: 150px;
+}
+
+/* DIVIDER */
+.divider {
+    width: 2px;
+    height: 22px;
+    background-color: #FF6B35;
+}
+
+/* NUMBER */
+.number h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0B1D3A;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* LINE UNDER NUMBER */
+.number h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #FF6B35;
+    transition: 0.3s;
+}
+
+.stat-line:hover .number h3::after {
+    width: 60px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .about-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .about-stats {
+        border-left: none;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .stat-line {
+        justify-content: center;
+    }
+
+    .label {
+        min-width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.services-section {
+    padding: 100px 20px;
+    background: #0B1D3A;
+    color: #fff;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* carousel wrapper */
+.services-carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* carousel flex */
+.services-carousel {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* service card */
+.service-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: #F5EBDD;
+    color: #0B1D3A;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.services-btn-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-order-services {
+    background-color: #FF6B35;
+    color: #F5EBDD;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-order-services:hover {
+    background-color: #f8571c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.5);
+    color: black;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .service-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 0 0 100%;
+    }
+}
+
+
+
+
+
+.order-section {
+    padding: 80px 20px;
+    background: #F5EBDD;
+    color: #0B1D3A;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-order-now {
+    background-color: #FF6B35;
+    color: #fff;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-order-now:hover {
+    background-color: #f8571c;
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.5);
+}
+
+
+
+.contact {
+    background-color: #0B1D3A;
+    /* كحلي */
+    color: #F5EBDD;
+    padding: 80px 20px;
+}
+
+.contact h2.h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #FF6B35;
+}
+
+/* Contact Info */
+.call p,
+.call a {
+    color: #F5EBDD;
+    margin: 10px 0;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.call a:hover {
+    color: #FF6B35;
+}
+
+.call img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Pages Links */
+.pages h2 {
+    color: #FF6B35;
+    margin-bottom: 15px;
+}
+
+.pages a {
+    display: block;
+    margin-bottom: 10px;
+    color: #F5EBDD;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.pages a:hover {
+    color: #FF6B35;
+}
+
+/* Delivery Map */
+.map h2 {
+    color: #FF6B35;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #F5EBDD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 12px 32px rgb(0, 0, 0);
+}
+
+footer h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    footer h2 {
+        font-size: 12px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .call,
+    .pages,
+    .map {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact h2.h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .pages a,
+    .call p,
+    .call a {
+        font-size: 14px;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    /* المسافة من الأسفل */
+    right: 20px;
+    /* المسافة من اليمين */
+    background-color: #25D366;
+    /* لون واتساب الأخضر */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 1000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
