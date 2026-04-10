@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Delivery Website</title>
+    <title>Site de Livraison</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
@@ -31,19 +31,19 @@
         </button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav mx-auto">
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">About</a></li>
+            <li><a class="nav-link" href="#">Accueil</a></li>
+            <li><a class="nav-link" href="#">À propos</a></li>
             <li><a class="nav-link" href="#">Services</a></li>
-            <li><a class="nav-link" href="#">Order Now</a></li>
+            <li><a class="nav-link" href="#">Commander</a></li>
             <li><a class="nav-link" href="#">Contact</a></li>
           </ul>
           <div class="nav-right">
-           <select class="lang-select" onchange="changeLanguage(this.value)">
+            <select class="lang-select" onchange="changeLanguage(this.value)">
               <option value="index.html">EN</option>
-              <option value="french.html">FR</option>
+              <option value="french.html" selected>FR</option>
               <option value="german.html">DE</option>
             </select>
-            <a href="#order" class="btn btn-order">Order Now</a>
+            <a href="#order" class="btn btn-order">Commander</a>
           </div>
         </div>
       </div>
@@ -53,17 +53,16 @@
     <section id="hero" class="hero-section">
       <div class="container">
         <div class="hero-content">
-          <h1>Get Your Order Fast & Easy</h1>
+          <h1>Recevez votre commande rapidement et facilement</h1>
           <p>
-            Choose your product and order directly via WhatsApp. Fast, safe, and
-            reliable service.
+            Choisissez votre produit et commandez directement via WhatsApp. Rapide, sûr et fiable.
           </p>
-          <a href="#order" class="btn btn-order">Order Now</a>
+          <a href="#order" class="btn btn-order">Commander</a>
         </div>
         <div class="hero-image">
           <img
             src="image/undraw_online-groceries_n03y.svg"
-            alt="Product Image"
+            alt="Image du produit"
           />
         </div>
       </div>
@@ -71,33 +70,29 @@
 
     <section class="about-section">
       <div class="container">
-        <!-- LEFT SIDE -->
         <div class="about-content">
-          <h2>About Us</h2>
+          <h2>À propos de nous</h2>
 
           <p>
-            We are a trusted delivery service focused on speed, reliability, and
-            convenience. Our goal is to simplify your daily needs by connecting
-            you with what matters most.
+            Nous sommes un service de livraison fiable axé sur la rapidité, la fiabilité et la commodité.
+            Notre objectif est de simplifier votre quotidien.
           </p>
 
           <p>
-            With years of experience, we have built a strong reputation for
-            delivering orders safely and on time, ensuring every customer enjoys
-            a smooth and stress-free experience.
+            Grâce à notre expérience, nous avons bâti une solide réputation en livrant les commandes
+            en toute sécurité et à temps.
           </p>
 
           <span class="about-highlight">
-            Fast • Reliable • Available Anytime
+            Rapide • Fiable • Disponible à tout moment
           </span>
 
-          <a href="#order" class="btn btn-order">Order Now</a>
+          <a href="#order" class="btn btn-order">Commander</a>
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="about-stats">
           <div class="stat-line">
-            <span class="label">Happy Clients</span>
+            <span class="label">Clients satisfaits</span>
             <span class="divider"></span>
             <div class="number">
               <h3>1200+</h3>
@@ -105,7 +100,7 @@
           </div>
 
           <div class="stat-line">
-            <span class="label">Orders Delivered</span>
+            <span class="label">Commandes livrées</span>
             <span class="divider"></span>
             <div class="number">
               <h3>3500+</h3>
@@ -113,7 +108,7 @@
           </div>
 
           <div class="stat-line">
-            <span class="label">Years Experience</span>
+            <span class="label">Années d'expérience</span>
             <span class="divider"></span>
             <div class="number">
               <h3>5+</h3>
@@ -125,127 +120,91 @@
 
     <section class="services-section">
       <div class="container">
-        <h2 class="section-title">Our Services</h2>
+        <h2 class="section-title">Nos services</h2>
 
         <div class="services-carousel-wrapper">
           <div class="services-carousel">
             <div class="service-card">
-              <img
-                src="image/undraw_online-groceries_n03y.svg"
-                alt="Food Delivery"
-              />
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Livraison de repas" />
               <div class="card-content">
-                <h3>Food Delivery</h3>
-                <p>
-                  Fast and reliable delivery from your favorite restaurants.
-                </p>
+                <h3>Livraison de repas</h3>
+                <p>Livraison rapide depuis vos restaurants préférés.</p>
               </div>
             </div>
 
             <div class="service-card">
-              <img
-                src="image/undraw_online-groceries_n03y.svg"
-                alt="Grocery Delivery"
-              />
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Courses" />
               <div class="card-content">
-                <h3>Grocery Delivery</h3>
-                <p>
-                  Get your daily essentials delivered straight to your door.
-                </p>
+                <h3>Courses à domicile</h3>
+                <p>Recevez vos produits quotidiens directement chez vous.</p>
               </div>
             </div>
 
             <div class="service-card">
-              <img
-                src="image/undraw_online-groceries_n03y.svg"
-                alt="Package Delivery"
-              />
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Colis" />
               <div class="card-content">
-                <h3>Package Delivery</h3>
-                <p>Safe and quick delivery for parcels and important items.</p>
+                <h3>Livraison de colis</h3>
+                <p>Livraison sûre et rapide pour vos colis.</p>
               </div>
             </div>
 
             <div class="service-card">
-              <img
-                src="image/undraw_online-groceries_n03y.svg"
-                alt="Pharmacy Delivery"
-              />
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Pharmacie" />
               <div class="card-content">
-                <h3>Pharmacy Delivery</h3>
-                <p>Order medicines and health products easily and fast.</p>
+                <h3>Livraison pharmacie</h3>
+                <p>Commandez vos médicaments facilement et rapidement.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- الزر بالنص -->
       <div class="services-btn-center">
-        <a href="#order" class="btn btn-order-services">Order Now</a>
+        <a href="#order" class="btn btn-order-services">Commander</a>
       </div>
     </section>
 
     <section class="order-section" id="order">
       <div class="container">
-        <h2 class="section-title">Place Your Order</h2>
+        <h2 class="section-title">Passer une commande</h2>
 
         <form id="orderForm">
           <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              required
-            />
+            <label for="name">Votre nom *</label>
+            <input type="text" id="name" placeholder="Entrez votre nom" required />
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Enter your phone number"
-              required
-            />
+            <label for="phone">Numéro de téléphone *</label>
+            <input type="tel" id="phone" placeholder="Entrez votre numéro" required />
           </div>
 
           <div class="form-group">
-            <label for="orderDetails">What You Want *</label>
-            <textarea
-              id="orderDetails"
-              placeholder="Enter your order details"
-              required
-            ></textarea>
+            <label for="orderDetails">Votre commande *</label>
+            <textarea id="orderDetails" placeholder="Détails de la commande" required></textarea>
           </div>
 
           <div class="form-group">
-            <label for="storeLocation">Store Location (Optional)</label>
-            <input
-              type="text"
-              id="storeLocation"
-              placeholder="Enter store location (optional)"
-            />
+            <label for="storeLocation">Localisation du magasin (optionnel)</label>
+            <input type="text" id="storeLocation" placeholder="Entrez la localisation" />
           </div>
 
           <div class="form-group">
-            <label for="productImage">Product Image (Optional)</label>
+            <label for="productImage">Image du produit (optionnel)</label>
             <input type="file" id="productImage" accept="image/*" />
           </div>
 
           <button type="submit" class="btn btn-order-now">
-            Send via WhatsApp
+            Envoyer via WhatsApp
           </button>
         </form>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="h2">Contact & Delivery</h2>
+      <h2 class="h2">Contact & Livraison</h2>
       <div class="container">
         <div class="row">
-          <!-- Contact Info -->
           <div class="col-12 col-md-6 col-lg-3 mb-4 call">
             <a class="navbar-brand" href="#">LOGO</a>
             <p>
@@ -258,60 +217,49 @@
             </p>
             <p>
               <i class="fa-brands fa-facebook icon"></i>
-              <a href="https://www.facebook.com/YourPage" target="_blank"
-                >Facebook</a
-              >
+              <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a>
             </p>
             <p>
               <i class="fa-brands fa-instagram icon"></i>
-              <a href="https://www.instagram.com/YourPage" target="_blank"
-                >Instagram</a
-              >
+              <a href="https://www.instagram.com/YourPage" target="_blank">Instagram</a>
             </p>
             <p>
               <i class="fa-brands fa-whatsapp icon"></i>
-              <a href="https://wa.me/20123456789" target="_blank"
-                >+20 123 456 789</a
-              >
+              <a href="https://wa.me/20123456789" target="_blank">+20 123 456 789</a>
             </p>
           </div>
 
-          <!-- Pages Links -->
           <div class="col-12 col-md-6 col-lg-4 mb-3 pages">
             <h2>PAGES</h2>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="gallery.html">Galerie</a>
             <a href="services.html">Services</a>
-            <a href="references.html">References</a>
-            <a href="#contact">Contact Us</a>
+            <a href="references.html">Références</a>
+            <a href="#contact">Contact</a>
           </div>
 
-          <!-- Delivery Map -->
           <div class="col-12 col-md-12 col-lg-4 mb-3 map">
-            <h2>Delivery Areas</h2>
+            <h2>Zones de livraison</h2>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.2278164827!2d31.217538315067125!3d30.044419981879812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145841f8a0f271a9%3A0x2a30cb3b8d689a87!2sCairo%2C%20Egypt!5e0!3m2!1sen!2sus!4v1699556523456!5m2!1sen!2sus"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <h2>© 2025. Designed by MohammedIyad. All right reserved.</h2>
+      <h2>© 2025. Conçu par MohammedIyad. Tous droits réservés.</h2>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/20123456789" target="_blank" class="whatsapp-float">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

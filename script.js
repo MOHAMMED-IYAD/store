@@ -51,3 +51,20 @@ form.addEventListener("submit", function(e){
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
   window.open(whatsappURL, "_blank");
 });
+
+
+
+
+
+
+ function changeLanguage(page) {
+    localStorage.setItem("lang", page);
+    window.location.href = page;
+  }
+
+  window.onload = function () {
+    const lang = localStorage.getItem("lang");
+    if (lang) {
+      document.querySelector(".lang-select").value = lang;
+    }
+  };

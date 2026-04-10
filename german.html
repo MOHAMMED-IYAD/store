@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lieferdienst Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <button
+          class="navbar-toggler text-white border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          ☰
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto">
+            <li><a class="nav-link" href="#">Startseite</a></li>
+            <li><a class="nav-link" href="#">Über uns</a></li>
+            <li><a class="nav-link" href="#">Dienstleistungen</a></li>
+            <li><a class="nav-link" href="#">Jetzt bestellen</a></li>
+            <li><a class="nav-link" href="#">Kontakt</a></li>
+          </ul>
+          <div class="nav-right">
+            <select class="lang-select" onchange="changeLanguage(this.value)">
+              <option value="index.html">EN</option>
+              <option value="french.html">FR</option>
+              <option value="german.html">DE</option>
+            </select>
+            <a href="#order" class="btn btn-order">Jetzt bestellen</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Erhalte deine Bestellung schnell & einfach</h1>
+          <p>
+            Wähle dein Produkt und bestelle direkt über WhatsApp. Schnell, sicher und zuverlässig.
+          </p>
+          <a href="#order" class="btn btn-order">Jetzt bestellen</a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="image/undraw_online-groceries_n03y.svg"
+            alt="Produktbild"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <!-- LEFT SIDE -->
+        <div class="about-content">
+          <h2>Über uns</h2>
+
+          <p>
+            Wir sind ein zuverlässiger Lieferdienst mit Fokus auf Schnelligkeit, Zuverlässigkeit und Komfort.
+            Unser Ziel ist es, deinen Alltag zu erleichtern.
+          </p>
+
+          <p>
+            Mit jahrelanger Erfahrung haben wir uns einen starken Ruf aufgebaut, indem wir Bestellungen sicher
+            und pünktlich liefern.
+          </p>
+
+          <span class="about-highlight">
+            Schnell • Zuverlässig • Jederzeit verfügbar
+          </span>
+
+          <a href="#order" class="btn btn-order">Jetzt bestellen</a>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="about-stats">
+          <div class="stat-line">
+            <span class="label">Zufriedene Kunden</span>
+            <span class="divider"></span>
+            <div class="number">
+              <h3>1200+</h3>
+            </div>
+          </div>
+
+          <div class="stat-line">
+            <span class="label">Gelieferte Bestellungen</span>
+            <span class="divider"></span>
+            <div class="number">
+              <h3>3500+</h3>
+            </div>
+          </div>
+
+          <div class="stat-line">
+            <span class="label">Jahre Erfahrung</span>
+            <span class="divider"></span>
+            <div class="number">
+              <h3>5+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title">Unsere Dienstleistungen</h2>
+
+        <div class="services-carousel-wrapper">
+          <div class="services-carousel">
+            <div class="service-card">
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Essenslieferung" />
+              <div class="card-content">
+                <h3>Essenslieferung</h3>
+                <p>Schnelle Lieferung von deinen Lieblingsrestaurants.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Lebensmittellieferung" />
+              <div class="card-content">
+                <h3>Lebensmittellieferung</h3>
+                <p>Erhalte deine täglichen Einkäufe direkt nach Hause.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Paketlieferung" />
+              <div class="card-content">
+                <h3>Paketlieferung</h3>
+                <p>Sichere und schnelle Lieferung für Pakete.</p>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <img src="image/undraw_online-groceries_n03y.svg" alt="Apothekenlieferung" />
+              <div class="card-content">
+                <h3>Apothekenlieferung</h3>
+                <p>Bestelle Medikamente einfach und schnell.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-btn-center">
+        <a href="#order" class="btn btn-order-services">Jetzt bestellen</a>
+      </div>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="container">
+        <h2 class="section-title">Bestellung aufgeben</h2>
+
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="name">Dein Name *</label>
+            <input type="text" id="name" placeholder="Name eingeben" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefonnummer *</label>
+            <input type="tel" id="phone" placeholder="Telefonnummer eingeben" required />
+          </div>
+
+          <div class="form-group">
+            <label for="orderDetails">Was möchtest du bestellen *</label>
+            <textarea id="orderDetails" placeholder="Bestelldetails eingeben" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="storeLocation">Standort des Geschäfts (Optional)</label>
+            <input type="text" id="storeLocation" placeholder="Standort eingeben" />
+          </div>
+
+          <div class="form-group">
+            <label for="productImage">Produktbild (Optional)</label>
+            <input type="file" id="productImage" accept="image/*" />
+          </div>
+
+          <button type="submit" class="btn btn-order-now">
+            Über WhatsApp senden
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="h2">Kontakt & Lieferung</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 mb-4 call">
+            <a class="navbar-brand" href="#">LOGO</a>
+            <p>
+              <i class="fa-solid fa-phone icon"></i>
+              <a href="tel:+20123456789">+20 123 456 789</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope icon"></i>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </p>
+            <p>
+              <i class="fa-brands fa-facebook icon"></i>
+              <a href="#">Facebook</a>
+            </p>
+            <p>
+              <i class="fa-brands fa-instagram icon"></i>
+              <a href="#">Instagram</a>
+            </p>
+            <p>
+              <i class="fa-brands fa-whatsapp icon"></i>
+              <a href="#">+20 123 456 789</a>
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-3 pages">
+            <h2>SEITEN</h2>
+            <a href="index.html">Startseite</a>
+            <a href="about.html">Über uns</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="services.html">Dienstleistungen</a>
+            <a href="references.html">Referenzen</a>
+            <a href="#contact">Kontakt</a>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-4 mb-3 map">
+            <h2>Liefergebiete</h2>
+            <iframe src="" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h2>© 2025. Entwickelt von MohammedIyad. Alle Rechte vorbehalten.</h2>
+    </footer>
+
+    <a href="https://wa.me/20123456789" target="_blank" class="whatsapp-float">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
